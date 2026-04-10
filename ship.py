@@ -1,3 +1,12 @@
+"""
+Program: ship.py
+Author: Kennett Aguilar-Zaldana
+Purpose: Defines the Ship class which represents the player's ship. Handles 
+movement, drawing, and firing bullets.
+Starter Code: None
+Date: 04/08/26
+"""
+
 import pygame
 from typing import TYPE_CHECKING
 
@@ -8,9 +17,17 @@ if TYPE_CHECKING:
 
 
 class Ship:
+    """Represents the player's ship and manages its movement and firing.
+    """
     
 
     def __init__(self, game: 'AlienInvasion', arsenal: 'Arsenal'):
+        """Initialize the ship at the bottom center of the screen.
+
+        Args:
+            game (AlienInvasion): The main AlienInvasion game instance.
+            arsenal (Arsenal): The Arsenal instance managing this ship's bullets.
+        """
         self.game = game
         self.settings = game.settings
         self.screen = game.screen
@@ -29,11 +46,15 @@ class Ship:
         self.arsenal = arsenal
 
     def update(self):
+        """Update ship position and refresh all active bullets.
+        """
         #updating the position of the ship
         self._update_ship_movement()
         self.arsenal.update_arsenal()
 
     def _update_ship_movement(self):
+        """Move the ship left or right while staying within screen boundaries.
+        """
         temp_speed = self.settings.ship_speed
         if self.moving_right and self.rect.right < self.boundaries.right:
             self.x += temp_speed
@@ -43,9 +64,16 @@ class Ship:
         self.rect.x = self.x
 
     def draw(self):
+        """Draw the ship and all active bullets to the screen.
+        """
         self.arsenal.draw()
         self.screen.blit(self.image, self.rect)
 
-    def fire(self):\
+    def fire(self):
+        """Attempt to fire a bullet from the ship.
+
+        Returns:
+            bool: True if a bullet was successfully fired, False if at the limit.
+        """
         return self.arsenal.fire_bullet()
         

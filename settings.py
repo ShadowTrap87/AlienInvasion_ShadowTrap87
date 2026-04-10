@@ -1,7 +1,20 @@
+"""
+Program: settings.py
+Author: Kennett Aguilar-Zaldana
+Purpose: Stores all configuration settings for the Alien Invasion game including 
+screen dimensions, ship properties, bullet properties, and asset file paths.
+Starter Code: None
+Date: 04/08/26
+"""
+
 from pathlib import Path
 class Settings:
+    """Holds all static settings for the Alien Invasion game.
+    """
     
     def __init__(self):
+        """Initialize game settings for screen, ship, bullets, and assets.
+        """
         self.name: str = 'Alien Invasion'
         self.screen_w = 1200
         self.screen_h = 800
