@@ -1,8 +1,7 @@
 """
 Program: settings.py
 Author: Kennett Aguilar-Zaldana
-Purpose: Stores all configuration settings for the Alien Invasion game including 
-screen dimensions, ship properties, bullet properties, and asset file paths.
+Purpose: Stores all configuration settings for the Alien Invasion game.
 Starter Code: None
 Date: 04/08/26
 """
@@ -25,13 +24,21 @@ class Settings:
         self.ship_w = 80
         self.ship_h = 80
         self.ship_speed = 5
+        self.starting_ship_count = 3
 
         self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'pizza_bullet.png'
         self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'laser.mp3'
+        self.impact_sound = Path.cwd() / 'Assets' / 'sound' / 'impactSound.mp3'
         self.bullet_speed = 7
         self.bullet_w = 80
         self.bullet_h = 80
         self.bullet_amount = 5
 
+        self.alien_file = Path.cwd() / 'Assets' / 'images' / 'enemy_4.png'
+        self.alien_w = 40
+        self.alien_h = 40
+        self.fleet_speed = 2
+        self.fleet_direction = 1
+        self.fleet_drop_speed = 40
 
 
