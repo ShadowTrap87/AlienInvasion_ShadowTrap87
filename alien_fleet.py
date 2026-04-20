@@ -45,9 +45,9 @@ class AlienFleet:
         fleet_w, fleet_h = self.calculate_fleet_size(alien_w, screen_w, alien_h, screen_h)
         x_offset, y_offset = self.calculate_offsets(alien_w, alien_h, screen_w, fleet_w, fleet_h)
         
-        self._create_rectangle_fleet(alien_w, alien_h, fleet_w, fleet_h, x_offset, y_offset)
+        self._create_diamond_fleet(alien_w, alien_h, fleet_w, fleet_h, x_offset, y_offset)
 
-    def _create_rectangle_fleet(self, alien_w, alien_h, fleet_w, fleet_h, x_offset, y_offset):
+    def _create_diamond_fleet(self, alien_w, alien_h, fleet_w, fleet_h, x_offset, y_offset):
         """Create aliens in a grid formation.
 
         Args:
@@ -60,11 +60,12 @@ class AlienFleet:
         """
         for row in range(fleet_h):
             for col in range(fleet_w):
-                current_x = alien_w * col + x_offset
-                currnet_y = alien_h * row + y_offset
-                if col % 2 == 0 or row % 2 == 0:
-                    continue
-                self._create_alien(current_x, currnet_y)
+                if abs(col - fleet_w // 2) + abs(row - fleet_h // 2) <= fleet_w // 2:
+                    current_x = alien_w * col + x_offset
+                    current_y = alien_h * row + y_offset
+                    self._create_alien(current_x, current_y)
+
+
 
     def calculate_offsets(self, alien_w, alien_h, screen_w, fleet_w, fleet_h):
         """Calculate starting position offsets for centering the fleet.
