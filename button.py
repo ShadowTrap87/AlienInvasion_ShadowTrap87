@@ -32,7 +32,11 @@ class Button:
         self.settings = game.settings
         self.font = pygame.font.Font(self.settings.font_file, 
             self.settings.button_font_size)
-        self.rect = pygame.Rect(0,0,self.settings.button_w, self.settings.button_h)
+        
+        self.image = pygame.image.load(self.settings.button_file)
+        self.image = pygame.transform.scale(self.image, 
+            (self.settings.button_w, self.settings.button_h))
+        self.rect = self.image.get_rect()
         self.rect.center = self.boundaries.center
         self._prep_msg(msg)
 
@@ -49,7 +53,8 @@ class Button:
     def draw(self):
         """Draw the button and its text to the screen.
         """
-        self.screen.fill(self.settings.button_color, self.rect)
+        self.screen.blit(self.image, self.rect)
+        self.screen.fill(self.settings.button_color, self.msg_image_rect)
         self.screen.blit(self.msg_image, self.msg_image_rect)
 
     def check_clicked(self, mouse_pos):

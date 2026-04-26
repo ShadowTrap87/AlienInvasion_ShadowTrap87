@@ -104,8 +104,16 @@ class HUD:
     def draw(self):
         """Draw all HUD elements to the screen.
         """
+        self.screen.fill(self.settings.hud_color, self.hi_score_rect)
         self.screen.blit(self.hi_score_image, self.hi_score_rect)
+
+        self.screen.fill(self.settings.hud_color, self.max_score_rect)
         self.screen.blit(self.max_score_image, self.max_score_rect)
+
+        self.screen.fill(self.settings.hud_color, self.score_rect)
         self.screen.blit(self.score_image, self.score_rect)
+
+        self.screen.fill(self.settings.hud_color, self.level_rect)
         self.screen.blit(self.level_image, self.level_rect)
+        
         self._draw_lives()
