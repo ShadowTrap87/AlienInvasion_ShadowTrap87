@@ -36,6 +36,7 @@ class Settings:
         self.scores_file = Path.cwd() / 'Assets' / 'file' / 'scores.json'
 
         self.ship_file = Path.cwd() / 'Assets' / 'images' / 'pizza_freddy.png'
+        self.lives_file = Path.cwd() / 'Assets' / 'images' / 'pizza_lives.png'
         self.ship_w = 80
         self.ship_h = 80
 
@@ -65,8 +66,8 @@ class Settings:
         self.ship_speed = 5
         self.starting_ship_count = 3
 
-        self.bullet_w = 80
-        self.bullet_h = 80
+        self.bullet_w = 70
+        self.bullet_h = 70
         self.bullet_speed = 7
         self.bullet_amount = 5
 

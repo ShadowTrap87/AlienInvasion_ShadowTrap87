@@ -38,10 +38,8 @@ class HUD:
     def _setup_life_image(self):
         """Load and scale the ship image used to display remaining lives.
         """
-        self.life_image = pygame.image.load(self.settings.ship_file)
-        self.life_image = pygame.transform.scale(self.life_image, (
-            self.settings.ship_w, self.settings.ship_h
-            ))
+        self.life_image = pygame.image.load(self.settings.lives_file)
+        self.life_image = pygame.transform.scale(self.life_image, (40,40))
         self.life_rect = self.life_image.get_rect()
 
 
