@@ -4,6 +4,19 @@ Author: Kennett Aguilar-Zaldana
 Purpose: Stores all configuration settings for the Alien Invasion game.
 Starter Code: None
 Date: 04/08/26
+
+Asset Attribution:
+- Background: Original art by Kennett Aguilar-Zaldana
+- Ship (pizza_freddy.png): Original art by Kennett Aguilar-Zaldana
+- Bullet (pizza_bullet.png): Original art by Kennett Aguilar-Zaldana
+- Alien (pizza_child.png): Original art by Kennett Aguilar-Zaldana
+- Play Button (pizza_play.png): Original art by Kennett Aguilar-Zaldana
+- Font: Sixtyfour Convergence, Google Fonts
+  https://fonts.google.com/specimen/Sixtyfour+Convergence
+- Laser Sound: 7 Eating Crunches, StarNinjas
+  https://opengameart.org/content/7-eating-crunches
+- Impact Sound: Fly Swatter Squish Sound, qubodup
+  https://opengameart.org/content/fly-swatter-squish-sound
 """
 
 from pathlib import Path
@@ -27,8 +40,8 @@ class Settings:
         self.ship_h = 80
 
         self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'pizza_bullet.png'
-        self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'laser.mp3'
-        self.impact_sound = Path.cwd() / 'Assets' / 'sound' / 'impactSound.mp3'
+        self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'flyswatter2.mp3'
+        self.impact_sound = Path.cwd() / 'Assets' / 'sound' / 'crunch.7.mp3'
 
         self.alien_file = Path.cwd() / 'Assets' / 'images' / 'pizza_child.png'
         self.alien_w = 80

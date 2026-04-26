@@ -6,6 +6,19 @@ the game loop, handles user input, and coordinates all game components.
 Starter Code: Alien Invasion Starter - RedBeard41
 https://github.com/RedBeard41/alien_Invasion_starter.git
 Date: 04/08/26
+
+Asset Attribution:
+- Background: Original art by Kennett Aguilar-Zaldana
+- Ship (pizza_freddy.png): Original art by Kennett Aguilar-Zaldana
+- Bullet (pizza_bullet.png): Original art by Kennett Aguilar-Zaldana
+- Alien (pizza_child.png): Original art by Kennett Aguilar-Zaldana
+- Play Button (pizza_play.png): Original art by Kennett Aguilar-Zaldana
+- Font: Sixtyfour Convergence, Google Fonts
+  https://fonts.google.com/specimen/Sixtyfour+Convergence
+- Laser Sound: 7 Eating Crunches, StarNinjas
+  https://opengameart.org/content/7-eating-crunches
+- Impact Sound: Fly Swatter Squish Sound, qubodup
+  https://opengameart.org/content/fly-swatter-squish-sound
 """
 
 import sys
