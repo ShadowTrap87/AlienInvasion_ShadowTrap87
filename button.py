@@ -20,7 +20,7 @@ class Button:
     """
 
     def __init__(self, game: 'AlienInvasion', msg):
-        """Initialize the button with text and position it at screen center.
+        """Initialize the button with a custom image and text centered on screen.
 
         Args:
             game (AlienInvasion): The main game instance.
@@ -51,7 +51,7 @@ class Button:
         self.msg_image_rect.center = self.rect.center
 
     def draw(self):
-        """Draw the button and its text to the screen.
+        """Draw the button image, colored text box, and text to the screen.
         """
         self.screen.blit(self.image, self.rect)
         self.screen.fill(self.settings.button_color, self.msg_image_rect)

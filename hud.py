@@ -102,7 +102,7 @@ class HUD:
             current_x += self.life_rect.width + self.padding
 
     def draw(self):
-        """Draw all HUD elements to the screen.
+        """Draw all HUD elements with colored background boxes to the screen.
         """
         self.screen.fill(self.settings.hud_color, self.hi_score_rect)
         self.screen.blit(self.hi_score_image, self.hi_score_rect)
@@ -115,5 +115,5 @@ class HUD:
 
         self.screen.fill(self.settings.hud_color, self.level_rect)
         self.screen.blit(self.level_image, self.level_rect)
-        
+
         self._draw_lives()

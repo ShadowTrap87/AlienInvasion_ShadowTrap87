@@ -52,8 +52,6 @@ class Settings:
         self.button_w = 200
         self.button_h = 200
         self.button_color = (0, 136, 0)
-        self.text_color = (255, 255, 255)
-        self.button_font_size = 48
         self.hud_color = (0,0,0)
 
         self.text_color = (255,255,255)
