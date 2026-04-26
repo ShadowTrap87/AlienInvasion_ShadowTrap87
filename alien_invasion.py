@@ -19,6 +19,8 @@ Asset Attribution:
   https://opengameart.org/content/7-eating-crunches
 - Impact Sound: Fly Swatter Squish Sound, qubodup
   https://opengameart.org/content/fly-swatter-squish-sound
+- Background Music: Copycat, syncopika
+  https://opengameart.org/content/copycat
 """
 
 import sys
@@ -38,7 +40,7 @@ class AlienInvasion:
     """
 
     def __init__(self):
-        """Initialize the game, display window, sounds, and core components.
+        """Initialize the game, display window, sounds, music ,and core components.
         """
         pygame.init()
         self.settings = Settings()
@@ -66,7 +68,10 @@ class AlienInvasion:
         self.impact_sound = pygame.mixer.Sound(self.settings.impact_sound)
         self.impact_sound.set_volume(0.7)
 
-        
+        pygame.mixer.music.load(self.settings.bg_music)
+        pygame.mixer.music.set_volume(0.2)
+        pygame.mixer.music.play(-1)
+
         self.ship = Ship(self, Arsenal(self))
         self.alien_fleet = AlienFleet(self)
         self.alien_fleet.create_fleet()

@@ -17,6 +17,8 @@ Asset Attribution:
   https://opengameart.org/content/7-eating-crunches
 - Impact Sound: Fly Swatter Squish Sound, qubodup
   https://opengameart.org/content/fly-swatter-squish-sound
+- Background Music: Copycat, syncopika
+  https://opengameart.org/content/copycat
 """
 
 from pathlib import Path
@@ -43,6 +45,7 @@ class Settings:
         self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'pizza_bullet.png'
         self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'flyswatter2.mp3'
         self.impact_sound = Path.cwd() / 'Assets' / 'sound' / 'crunch.7.mp3'
+        self.bg_music = Path.cwd() / 'Assets' / 'sound' / 'copycat(revised).mp3'
 
         self.alien_file = Path.cwd() / 'Assets' / 'images' / 'pizza_child.png'
         self.alien_w = 80
