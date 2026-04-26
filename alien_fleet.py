@@ -48,7 +48,7 @@ class AlienFleet:
         self._create_diamond_fleet(alien_w, alien_h, fleet_w, fleet_h, x_offset, y_offset)
 
     def _create_diamond_fleet(self, alien_w, alien_h, fleet_w, fleet_h, x_offset, y_offset):
-        """Create aliens in a grid formation.
+        """Create aliens in a diamond formation.
 
         Args:
             alien_w (int): Width of aliens.
@@ -88,7 +88,7 @@ class AlienFleet:
             tuple[int, int]: (fleet_width, fleet_height)
         """
         fleet_w = (screen_w//alien_w)
-        fleet_h = ((screen_h /2)//alien_h)
+        fleet_h = ((screen_h * 0.6)//alien_h)
 
         if fleet_w % 2 == 0:
             fleet_w -= 1
