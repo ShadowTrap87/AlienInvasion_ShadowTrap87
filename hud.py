@@ -36,7 +36,7 @@ class HUD:
         self.update_level()
 
     def _setup_life_image(self):
-        """Load and scale the ship image used to display remaining lives.
+        """Load and scale the lives image used to display remaining lives.
         """
         self.life_image = pygame.image.load(self.settings.lives_file)
         self.life_image = pygame.transform.scale(self.life_image, (40,40))

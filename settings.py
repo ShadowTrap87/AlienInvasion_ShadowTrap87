@@ -11,6 +11,7 @@ Asset Attribution:
 - Bullet (pizza_bullet.png): Original art by Kennett Aguilar-Zaldana
 - Alien (pizza_child.png): Original art by Kennett Aguilar-Zaldana
 - Play Button (pizza_play.png): Original art by Kennett Aguilar-Zaldana
+- Lives (pizza_lives.png): Original art by Kennett Aguilar-Zaldana
 - Font: Sixtyfour Convergence, Google Fonts
   https://fonts.google.com/specimen/Sixtyfour+Convergence
 - Laser Sound: 7 Eating Crunches, StarNinjas
